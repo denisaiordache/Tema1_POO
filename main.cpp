@@ -19,6 +19,7 @@ public:
         next = nullptr;
     }
     friend ostream &operator <<(ostream &out,const Nod &nod );
+    friend void citire_n(int n);
 
 };
 
@@ -150,6 +151,12 @@ Coada_de_caractere Coada_de_caractere::operator-(Coada_de_caractere  &queue) {
     return cd;
 
 }
+void citire_n(int n)
+{Coada_de_caractere x[100];
+ for(int i=0;i<n;i++)
+     cin>>x[i];
+ for(int i=0;i<n;i++)
+     cout<<x[i]<<endl;}
 int main()
 {
     Coada_de_caractere ob1;
@@ -166,6 +173,9 @@ int main()
     cout<<ob2<<endl;
     cout<<ob1+ob2<<endl;
     cout<<ob1-ob2<<endl;
+    int n;
+    cin>>n;
+    citire_n(n);
 
     return 0;
 }
